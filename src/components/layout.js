@@ -39,7 +39,7 @@ const Layout = ({ children }) => (
             © {new Date().getFullYear()} St. Clement of Ohrid, Macedonian
             Orthodox Cathedral | Built by
             {` `}
-            <a href="https://www.linkedin.com/veletosevski">Vele Tosevski</a>
+            <a href="https://ca.linkedin.com/in/veletosevski">Vele Tosevski</a>
           </footer>
         </div>
       </>
