@@ -8,10 +8,9 @@ import {
   Button,
 } from "react-bootstrap"
 
-import "./bootstrap.min.css"
 import "./header.css"
 
-import logo from "../images/favicon.png"
+import logo from "../images/MOC_logo.svg"
 
 export default class NavbarStrap extends React.Component {
   constructor(props) {
