@@ -3,8 +3,30 @@ module.exports = {
     title: `St. Clement of Ohrid`,
     description: `Official website of St.Clement of Ohrid Macedonian Orthodox Cathedral Toronto, Ontario.  Visit us for more info on events and our banquet halls`,
     author: `@VeleTosevski`,
-    keywords:
-      "Macedonia, Orthodox, Banquet Hall, Events, Parties, Christianity",
+    menu: {
+      links: [
+        {
+          name: "About",
+          link: "/about",
+        },
+        {
+          name: "Spiritual",
+          link: "/spiritual",
+        },
+        {
+          name: "Banquet Halls",
+          link: "/banquethalls",
+        },
+        {
+          name: "Events",
+          link: "/events",
+        },
+        {
+          name: "Groups",
+          link: "/groups",
+        },
+      ],
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
