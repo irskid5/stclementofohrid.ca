@@ -1,31 +1,61 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import {
+  Navbar,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
+} from "react-bootstrap"
 
-import "./navbar.css"
+import "./bootstrap.min.css"
+import "./header.css"
 
-class Navbar extends React.Component {
+import logo from "../images/favicon.png"
+
+export default class NavbarStrap extends React.Component {
   constructor(props) {
     super(props)
-  }
-  componentDidMount() {}
 
+    this.toggle = this.toggle.bind(this)
+    this.state = {
+      isOpen: false,
+    }
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    })
+  }
   render() {
     return (
-      <div class="Navbar">
-        <nav class="Navbar_Items">
-          <div class="Navbar_Link Navbar_Link-brand">Website title</div>
-          <div class="Navbar_Link">Link</div>
-          <div class="Navbar_Link">Link</div>
-          <div class="Navbar_Link">Link</div>
-        </nav>
-        <nav class="Navbar_Items Navbar_Items--right">
-          <div class="Navbar_Link">Link</div>
-          <div class="Navbar_Link">Link</div>
-        </nav>
-      </div>
+      <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="/">
+          <img src={logo} alt="Logo" className="navbarLogo" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="/about">About</Nav.Link>
+            <Nav.Link href="/spiritual">Spiritual</Nav.Link>
+            <Nav.Link href="/banquethalls">Banquet Halls</Nav.Link>
+            <Nav.Link href="/events">Events</Nav.Link>
+            <NavDropdown title="Groups" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/groups">
+                Ensemble Makedonka
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/groups">
+                Ladies Auxilary
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/groups">MYNET</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-success">Search</Button>
+          </Form>
+        </Navbar.Collapse>
+      </Navbar>
     )
   }
 }
-
-export default Navbar

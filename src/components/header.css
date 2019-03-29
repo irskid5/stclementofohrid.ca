@@ -5,6 +5,7 @@
   align-items: center;
   height: 10vh;
   width: 100vw;
+  position: fixed;
 }
 
 .navbarLogoContainer {
@@ -46,5 +47,12 @@
 }
 
 .navbarLink {
-  text-decoration: solid;
+  text-decoration: none;
+  font-family: "Segoe UI", Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: large;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
