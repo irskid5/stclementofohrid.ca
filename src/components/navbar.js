@@ -15,16 +15,6 @@ import logo from "../images/MOC_logo.svg"
 export default class NavbarStrap extends React.Component {
   constructor(props) {
     super(props)
-
-    this.toggle = this.toggle.bind(this)
-    this.state = {
-      isOpen: false,
-    }
-  }
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen,
-    })
   }
   render() {
     return (
