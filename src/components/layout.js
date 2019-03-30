@@ -45,13 +45,13 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()} St. Clement of Ohrid, Macedonian
-            Orthodox Cathedral | Built by
-            {` `}
-            <a href="https://ca.linkedin.com/in/veletosevski">Vele Tosevski</a>
-          </footer>
         </div>
+        <footer style={{ "text-align": "center" }}>
+          © {new Date().getFullYear()} St. Clement of Ohrid, Macedonian Orthodox
+          Cathedral | Built by
+          {` `}
+          <a href="https://ca.linkedin.com/in/veletosevski">Vele Tosevski</a>
+        </footer>
       </>
     )}
   />
