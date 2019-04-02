@@ -11,12 +11,13 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-import "./bootstrap.min.css"
+
+import logo from "../images/header.svg"
 
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteQuery {
+      query {
         site {
           siteMetadata {
             title
@@ -35,6 +36,7 @@ const Layout = ({ children }) => (
         <Header
           menuLinks={data.site.siteMetadata.menu.links}
           siteTitle={data.site.siteMetadata.title}
+          headerImage={logo}
         />
         <div
           style={{

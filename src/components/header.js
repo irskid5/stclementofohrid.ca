@@ -1,27 +1,57 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Img from "gatsby-image"
+import Link from "gatsby-link"
 
-//import "./header.css"
-import NavbarStrap from "../components/navbar"
-import logo from "../images/MOC_logo.svg"
+import {
+  Navbar,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
+} from "react-bootstrap"
 
-const Header = ({ siteTitle, menuLinks }) => (
-  <NavbarStrap logo={logo} />
-  // <div className="navbarContainer">
-  //   <div className="navbarLogoContainer">
-  //     <img src={logo} alt="Logo" className="navbarLogo" />
-  //   </div>
-  //   <div className="navbarItemContainer">
-  //     {menuLinks.map(link => (
-  //       <li key={link.name} className="navbarItem">
-  //         <Link to={link.link} className="navbarLink">
-  //           {link.name}
-  //         </Link>
-  //       </li>
-  //     ))}
-  //   </div>
-  // </div>
+import "./header.css"
+
+const Header = ({ siteTitle, menuLinks, headerImage }) => (
+  <Navbar bg="light" expand="lg">
+    <Link className="nav-brand" to="/">
+      <img src={headerImage} alt="Logo" className="navbarLogo" />
+    </Link>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="mr-auto">
+        <Link className="nav-link" to="/about">
+          About
+        </Link>
+        <Link className="nav-link" to="/spiritual">
+          Spiritual
+        </Link>
+        <Link className="nav-link" to="/banquethalls">
+          Banquet Halls
+        </Link>
+        <Link className="nav-link" to="/events">
+          Events
+        </Link>
+        <NavDropdown title="Groups" id="basic-nav-dropdown">
+          <Link className="dropdown-item" to="/groups">
+            Ensemble Makedonka
+          </Link>
+          <Link className="dropdown-item" to="/groups">
+            Ladies Auxilary
+          </Link>
+          <Link className="dropdown-item" to="/groups">
+            MYNET
+          </Link>
+        </NavDropdown>
+      </Nav>
+      <Form inline>
+        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+        <Button variant="outline-success">Search</Button>
+      </Form>
+    </Navbar.Collapse>
+  </Navbar>
 )
 
 Header.propTypes = {
