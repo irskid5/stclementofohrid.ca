@@ -1,15 +1,15 @@
 import PropTypes from "prop-types"
 import React from "react"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import Link from "gatsby-link"
 
 import {
   Navbar,
   Nav,
   NavDropdown,
-  Form,
-  FormControl,
-  Button,
+  // Form,
+  // FormControl,
+  // Button,
 } from "react-bootstrap"
 
 import "./header.css"
@@ -40,6 +40,12 @@ const Header = ({ siteTitle, menuLinks, headerImage }) => (
           </Link>
           <Link className="dropdown-item" to="/groups">
             Ladies Auxilary
+          </Link>
+          <Link className="dropdown-item" to="/groups">
+            Bowling
+          </Link>
+          <Link className="dropdown-item" to="/groups">
+            Sunday School
           </Link>
           <Link className="dropdown-item" to="/groups">
             MYNET

@@ -4,7 +4,17 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Home"
+      keywords={[
+        `St.Clement`,
+        `Church`,
+        `Macedonia`,
+        `Orthodox`,
+        `Cathedral`,
+        `Christianity`,
+      ]}
+    />
   </>
 )
 
