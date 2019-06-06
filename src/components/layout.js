@@ -61,32 +61,38 @@ const Layout = ({ children }) => (
           <div>
             <div>
               <Link to="/">
-                <img src={logo} alt="Logo" style={{ width: "5vw" }} />
+                <img src={logo} alt="Logo" style={{ width: "70px" }} />
               </Link>
             </div>
             <div>
-              <a style={{ paddingBottom: "0.5em" }}>Contact Info</a>
+              <h1 style={{ paddingBottom: "0.5em", fontSize: "14pt" }}>
+                Contact Info
+              </h1>
               <div style={{ alignItems: "center" }}>
                 <a href="https://goo.gl/maps/jc7UHqgNUDNsAiNC9">
-                  <FontAwesomeIcon icon={faMapMarkerAlt} />
+                  <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" />
                 </a>
-                <a style={{ paddingLeft: "0.6em" }}>
+                <a style={{ paddingLeft: "0.6em", fontSize: "14pt" }}>
                   76 Overlea Blvd, East York, ON M4H 1C5
                 </a>
               </div>
               <div style={{ alignItems: "center" }}>
-                <FontAwesomeIcon icon={faPhoneAlt} />
-                <a style={{ paddingLeft: "0.4em" }}>(416) 421-7451</a>
+                <FontAwesomeIcon icon={faPhoneAlt} size="lg" />
+                <a style={{ paddingLeft: "0.4em", fontSize: "14pt" }}>
+                  (416) 421-7451
+                </a>
               </div>
               <div style={{ alignItems: "center" }}>
-                <FontAwesomeIcon icon={faEnvelope} />
-                <a style={{ paddingLeft: "0.4em" }}>
+                <FontAwesomeIcon icon={faEnvelope} size="lg" />
+                <a style={{ paddingLeft: "0.4em", fontSize: "14pt" }}>
                   info@stclementofohrid.com
                 </a>
               </div>
             </div>
             <div style={{ alignItems: "center" }}>
-              <a style={{ paddingBottom: "0.5em" }}>Follow us on</a>
+              <h1 style={{ paddingBottom: "0.5em", fontSize: "14pt" }}>
+                Follow us on
+              </h1>
               <div
                 style={{
                   alignItems: "center",
@@ -97,13 +103,13 @@ const Layout = ({ children }) => (
                   style={{ paddingLeft: "0.2em", paddingRight: "0.2em" }}
                   href="https://www.facebook.com/StClementMacedonianOrthodoxCathedralToronto/"
                 >
-                  <FontAwesomeIcon icon={faFacebook} fixedWidth />
+                  <FontAwesomeIcon icon={faFacebook} fixedWidth size="2x" />
                 </a>
                 <a
                   style={{ paddingLeft: "0.2em", paddingRight: "0.2em" }}
                   href="https://www.instagram.com/st.clement_toronto/"
                 >
-                  <FontAwesomeIcon icon={faInstagram} fixedWidth />
+                  <FontAwesomeIcon icon={faInstagram} fixedWidth size="2x" />
                 </a>
               </div>
             </div>

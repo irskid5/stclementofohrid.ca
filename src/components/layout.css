@@ -24,7 +24,6 @@ footer > div {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 1em;
 }
 footer > div > div {
   display: flex;
