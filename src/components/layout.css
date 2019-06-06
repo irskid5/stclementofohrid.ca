@@ -31,6 +31,8 @@ footer > div > div {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 1em;
+  padding-right: 2em;
+  padding-left: 2em;
 }
 @media (max-width: 418px) {
   footer > div > div {

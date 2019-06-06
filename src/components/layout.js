@@ -115,7 +115,9 @@ const Layout = ({ children }) => (
             </div>
           </div>
           <div>
-            <div style={{ alignItems: "center" }}>
+            <div
+              style={{ alignItems: "center", color: "grey", fontSize: "9pt" }}
+            >
               <div style={{ textAlign: "center" }}>
                 © {new Date().getFullYear()} St. Clement of Ohrid, Macedonian
                 Orthodox Cathedral
