@@ -18,10 +18,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import { faFacebook, faInstagram } from "@fortawesome/fontawesome-free-brands"
 
+import { Button } from "react-bootstrap"
+
 import Header from "./header"
 import "./layout.css"
 
-import logo from "../images/header.svg"
+import logo from "../images/st_clement _logo_wide.svg"
+import footerLogo from "../images/St Clement _logo.svg"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -61,7 +64,11 @@ const Layout = ({ children }) => (
           <div>
             <div>
               <Link to="/">
-                <img src={logo} alt="Logo" style={{ width: "70px" }} />
+                <img
+                  src={footerLogo}
+                  alt="Logo"
+                  style={{ maxHeight: "30vh" }}
+                />
               </Link>
             </div>
             <div>
@@ -89,9 +96,21 @@ const Layout = ({ children }) => (
                 </a>
               </div>
             </div>
+            <div>
+              <h1 style={{ paddingBottom: "0.5em", fontSize: "14pt" }}>
+                Office Hours
+              </h1>
+              <div>
+                <a style={{}}>
+                  Mon - Fri: 9am - 5pm
+                  <br />
+                  Sat - Sun: 9am - 3pm
+                </a>
+              </div>
+            </div>
             <div style={{ alignItems: "center" }}>
               <h1 style={{ paddingBottom: "0.5em", fontSize: "14pt" }}>
-                Follow us on
+                Follow Us
               </h1>
               <div
                 style={{
@@ -111,6 +130,18 @@ const Layout = ({ children }) => (
                 >
                   <FontAwesomeIcon icon={faInstagram} fixedWidth size="2x" />
                 </a>
+              </div>
+            </div>
+            <div>
+              <h1 style={{ paddingBottom: "0.5em", fontSize: "14pt" }}>
+                We Need Your Help!
+              </h1>
+              <div>
+                <Link to="/">
+                  <Button variant="outline-danger" color="#c8040c" disabled>
+                    Donate Now
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
