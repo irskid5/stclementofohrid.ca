@@ -15,7 +15,7 @@ import {
 import "./header.css"
 
 const Header = ({ siteTitle, menuLinks, headerImage }) => (
-  <Navbar bg="light" expand="lg">
+  <Navbar bg="light" expand="lg" sticky="top">
     <Link className="nav-brand" to="/">
       <img src={headerImage} alt="Logo" className="navbarLogo" />
     </Link>
