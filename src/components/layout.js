@@ -156,7 +156,11 @@ const Layout = ({ children }) => (
               </h1>
               <div>
                 <Link to="/">
-                  <Button variant="outline-danger" color="#901B1C">
+                  <Button
+                    variant="outline-danger"
+                    style={{ color: "#901B1C", borderColor: "#901B1C" }}
+                    disabled
+                  >
                     Donate Now
                   </Button>
                 </Link>
