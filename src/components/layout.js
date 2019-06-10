@@ -78,7 +78,7 @@ const Layout = ({ children }) => (
               <div style={{ alignItems: "center" }}>
                 <a
                   href="https://goo.gl/maps/jc7UHqgNUDNsAiNC9"
-                  style={{ color: "rgb(144, 27, 28)" }}
+                  style={{ color: "#901B1C" }}
                 >
                   <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" />
                 </a>
@@ -87,10 +87,7 @@ const Layout = ({ children }) => (
                 </a>
               </div>
               <div style={{ alignItems: "center" }}>
-                <a
-                  href="tel:+14164217451"
-                  style={{ color: "rgb(144, 27, 28)" }}
-                >
+                <a href="tel:+14164217451" style={{ color: "#901B1C" }}>
                   <FontAwesomeIcon icon={faPhoneAlt} size="lg" />
                 </a>
                 <a style={{ paddingLeft: "0.4em", fontSize: "14pt" }}>
@@ -100,7 +97,7 @@ const Layout = ({ children }) => (
               <div style={{ alignItems: "center" }}>
                 <a
                   href="mailto:info@stclementofohrid.com"
-                  style={{ color: "rgb(144, 27, 28)" }}
+                  style={{ color: "#901B1C" }}
                 >
                   <FontAwesomeIcon icon={faEnvelope} size="lg" />
                 </a>
@@ -135,7 +132,7 @@ const Layout = ({ children }) => (
                   style={{
                     paddingLeft: "0.2em",
                     paddingRight: "0.2em",
-                    color: "rgb(144, 27, 28)",
+                    color: "#901B1C",
                   }}
                   href="https://www.facebook.com/StClementMacedonianOrthodoxCathedralToronto/"
                 >
@@ -145,7 +142,7 @@ const Layout = ({ children }) => (
                   style={{
                     paddingLeft: "0.2em",
                     paddingRight: "0.2em",
-                    color: "rgb(144, 27, 28)",
+                    color: "#901B1C",
                   }}
                   href="https://www.instagram.com/st.clement_toronto/"
                 >
@@ -159,7 +156,7 @@ const Layout = ({ children }) => (
               </h1>
               <div>
                 <Link to="/">
-                  <Button variant="outline-danger" color="rgb(144, 27, 28)">
+                  <Button variant="outline-danger" color="#901B1C">
                     Donate Now
                   </Button>
                 </Link>
