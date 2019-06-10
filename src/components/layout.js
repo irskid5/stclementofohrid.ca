@@ -76,7 +76,10 @@ const Layout = ({ children }) => (
                 Contact Info
               </h1>
               <div style={{ alignItems: "center" }}>
-                <a href="https://goo.gl/maps/jc7UHqgNUDNsAiNC9">
+                <a
+                  href="https://goo.gl/maps/jc7UHqgNUDNsAiNC9"
+                  style={{ color: "rgb(144, 27, 28)" }}
+                >
                   <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" />
                 </a>
                 <a style={{ paddingLeft: "0.6em", fontSize: "14pt" }}>
@@ -84,13 +87,23 @@ const Layout = ({ children }) => (
                 </a>
               </div>
               <div style={{ alignItems: "center" }}>
-                <FontAwesomeIcon icon={faPhoneAlt} size="lg" />
+                <a
+                  href="tel:+14164217451"
+                  style={{ color: "rgb(144, 27, 28)" }}
+                >
+                  <FontAwesomeIcon icon={faPhoneAlt} size="lg" />
+                </a>
                 <a style={{ paddingLeft: "0.4em", fontSize: "14pt" }}>
                   (416) 421-7451
                 </a>
               </div>
               <div style={{ alignItems: "center" }}>
-                <FontAwesomeIcon icon={faEnvelope} size="lg" />
+                <a
+                  href="mailto:info@stclementofohrid.com"
+                  style={{ color: "rgb(144, 27, 28)" }}
+                >
+                  <FontAwesomeIcon icon={faEnvelope} size="lg" />
+                </a>
                 <a style={{ paddingLeft: "0.4em", fontSize: "14pt" }}>
                   info@stclementofohrid.com
                 </a>
@@ -119,13 +132,21 @@ const Layout = ({ children }) => (
                 }}
               >
                 <a
-                  style={{ paddingLeft: "0.2em", paddingRight: "0.2em" }}
+                  style={{
+                    paddingLeft: "0.2em",
+                    paddingRight: "0.2em",
+                    color: "rgb(144, 27, 28)",
+                  }}
                   href="https://www.facebook.com/StClementMacedonianOrthodoxCathedralToronto/"
                 >
                   <FontAwesomeIcon icon={faFacebook} fixedWidth size="2x" />
                 </a>
                 <a
-                  style={{ paddingLeft: "0.2em", paddingRight: "0.2em" }}
+                  style={{
+                    paddingLeft: "0.2em",
+                    paddingRight: "0.2em",
+                    color: "rgb(144, 27, 28)",
+                  }}
                   href="https://www.instagram.com/st.clement_toronto/"
                 >
                   <FontAwesomeIcon icon={faInstagram} fixedWidth size="2x" />
@@ -138,7 +159,7 @@ const Layout = ({ children }) => (
               </h1>
               <div>
                 <Link to="/">
-                  <Button variant="outline-danger" color="#c8040c" disabled>
+                  <Button variant="outline-danger" color="rgb(144, 27, 28)">
                     Donate Now
                   </Button>
                 </Link>
