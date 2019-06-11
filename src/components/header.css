@@ -98,3 +98,13 @@
 #basic-navbar-nav > div > div > a {
   color: #64605b;
 }
+
+#basic-navbar-nav > div > div > div {
+  background-color: #f8f9fa;
+}
+#basic-navbar-nav > div > div > div > a {
+  color: #64605b;
+}
+#basic-navbar-nav > div > div > div > a:hover {
+  color: #0a0909;
+}
