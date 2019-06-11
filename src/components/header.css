@@ -1,73 +1,70 @@
-.navbarContainer {
-  display: flex;
-  flex-direction: row;
-  background: whitesmoke;
-  align-items: center;
-  height: 10vh;
-  width: 100vw;
-  position: fixed;
-}
-
-.navbarLogoContainer {
-  display: flex;
-  align-self: flex-start;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  max-width: 20vw;
-  max-height: 10vh;
-}
-
 .navbarLogo {
-  max-width: 23vw;
-}
-
-@media (max-width: 728px) {
-  .navbarLogo {
-    max-width: 72vw;
-  }
-}
-
-.navbarItemContainer {
-  display: flex;
-  align-self: flex-end;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: row;
-  flex: 1;
-  height: 100%;
-}
-
-.navbarItem {
-  display: flex;
-  width: 150px;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: none;
-}
-
-.navbarLink {
-  text-decoration: none;
-  font-family: "Segoe UI", Arial, sans-serif;
-  letter-spacing: 1px;
-  font-size: large;
+  max-width: 270px;
+  min-width: 200px;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
+.box-items {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.box-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.box-hamburger {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+@media all and (max-width: 991px) {
+  #___gatsby > div > nav {
+    flex-wrap: wrap;
+  }
+  .box-links {
+    order: 3;
+    flex: none;
+    width: 100%;
+  }
+  .box-logo {
+    order: 1;
+    flex: none;
+    width: 80%;
+    justify-content: flex-start;
+  }
+  .box-hamburger {
+    order: 2;
+    flex: none;
+    width: 20%;
+  }
+}
+
+#basic-navbar-nav {
+  margin-right: auto;
+}
+
+#basic-navbar-nav > div {
+  align-items: flex-start;
+}
+
 #basic-navbar-nav > div > a {
   position: relative;
   color: #64605b;
   text-decoration: none;
+  text-align: center;
 }
 
 #basic-navbar-nav > div > a:focus,
 #basic-navbar-nav > div > a:hover {
   color: #0a0909;
-  /* color: #64605b; */
   text-decoration: none;
 }
 
@@ -99,6 +96,28 @@
 #basic-navbar-nav > div > div > a {
   color: #64605b;
 }
+#basic-navbar-nav > div > div > a::after {
+  display: none;
+}
+#basic-navbar-nav > div > div > a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0px;
+  left: 0;
+  background-color: #901b1c;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+#basic-navbar-nav > div > div > a:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
 
 #basic-navbar-nav > div > div > div {
   background-color: #f8f9fa;
@@ -120,7 +139,11 @@
   background-color: transparent;
 }
 
-@media (max-width: 989px) {
+#toggler-hamburger {
+  margin-left: auto;
+}
+
+@media (max-width: 991px) {
   #basic-navbar-nav > div > a {
     text-align: center;
   }

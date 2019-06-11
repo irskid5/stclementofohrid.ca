@@ -16,43 +16,49 @@ import "./header.css"
 
 const Header = ({ siteTitle, menuLinks, headerImage }) => (
   <Navbar bg="light" expand="lg" sticky="top">
-    <Link className="nav-brand" to="/">
-      <img src={headerImage} alt="Logo" className="navbarLogo" />
-    </Link>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="mr-auto">
-        <Link className="nav-link" to="/about">
-          About
-        </Link>
-        <Link className="nav-link" to="/spiritual">
-          Spiritual
-        </Link>
-        <Link className="nav-link" to="/banquethalls">
-          Banquet Halls
-        </Link>
-        <Link className="nav-link" to="/events">
-          Events
-        </Link>
-        <NavDropdown title="Groups" id="basic-nav-dropdown">
-          <Link className="dropdown-item" to="/groups">
-            Ensemble Makedonka
+    <div className="box-links">
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Link className="nav-link" to="/about">
+            About
           </Link>
-          <Link className="dropdown-item" to="/groups">
-            Ladies Auxilary
+          <Link className="nav-link" to="/spiritual">
+            Spiritual
           </Link>
-          <Link className="dropdown-item" to="/groups">
-            Bowling
+          <Link className="nav-link" to="/banquethalls">
+            Banquet Halls
           </Link>
-          <Link className="dropdown-item" to="/groups">
-            Sunday School
+          <Link className="nav-link" to="/events">
+            Events
           </Link>
-          <Link className="dropdown-item" to="/groups">
-            MYNET
-          </Link>
-        </NavDropdown>
-      </Nav>
-    </Navbar.Collapse>
+          <NavDropdown title="Groups" id="basic-nav-dropdown">
+            <Link className="dropdown-item" to="/groups">
+              Ensemble Makedonka
+            </Link>
+            <Link className="dropdown-item" to="/groups">
+              Ladies Auxilary
+            </Link>
+            <Link className="dropdown-item" to="/groups">
+              Bowling
+            </Link>
+            <Link className="dropdown-item" to="/groups">
+              Sunday School
+            </Link>
+            <Link className="dropdown-item" to="/groups">
+              MYNET
+            </Link>
+          </NavDropdown>
+        </Nav>
+      </Navbar.Collapse>
+    </div>
+    <div className="box-logo">
+      <Link className="nav-brand" to="/">
+        <img src={headerImage} alt="Logo" className="navbarLogo" />
+      </Link>
+    </div>
+    <div className="box-hamburger">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" id="toggler-hamburger" />
+    </div>
   </Navbar>
 )
 
