@@ -66,8 +66,8 @@
 
 .nav-link-new:focus,
 .nav-link-new:hover {
-  /* color: #0a0909; */
-  color: #64605b;
+  color: #0a0909;
+  /* color: #64605b; */
   text-decoration: none;
 }
 
@@ -90,4 +90,11 @@
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+#basic-navbar-nav > div > div > a:focus,
+#basic-navbar-nav > div > div > a:hover {
+  color: #0a0909;
+}
+#basic-navbar-nav > div > div > a {
+  color: #64605b;
 }
