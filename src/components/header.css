@@ -102,10 +102,52 @@
 
 #basic-navbar-nav > div > div > div {
   background-color: #f8f9fa;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 #basic-navbar-nav > div > div > div > a {
   color: #64605b;
 }
 #basic-navbar-nav > div > div > div > a:hover {
   color: #0a0909;
+}
+#basic-navbar-nav > div > div > div > a:active {
+  color: #0a0909;
+  background-color: transparent;
+}
+
+@media (max-width: 989px) {
+  #basic-navbar-nav > div > a {
+    text-align: center;
+  }
+  #basic-navbar-nav > div > a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0px;
+    left: 0;
+    background-color: #901b1c;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  #basic-navbar-nav > div > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  #basic-navbar-nav > div > div > a {
+    text-align: center;
+  }
+  #basic-navbar-nav > div > div > div > a {
+    text-align: center;
+  }
 }
