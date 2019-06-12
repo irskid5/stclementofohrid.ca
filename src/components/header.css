@@ -1,3 +1,7 @@
+#navbar {
+  background-color: transparent;
+}
+
 .navbarLogo {
   max-width: 270px;
   min-width: 200px;
@@ -26,7 +30,7 @@
 }
 
 @media all and (max-width: 991px) {
-  #___gatsby > div > nav {
+  #header {
     flex-wrap: wrap;
   }
   .box-links {
@@ -155,7 +159,7 @@
   margin: 4px;
 }
 .navbar-toggler span.icon-bar {
-  transition: all 0.25s;
+  transition: all 0.4s;
 }
 
 .navbar-toggler span:nth-child(1),
@@ -167,12 +171,10 @@
 }
 
 .navbar-toggler.collapsed span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 7px;
+  transform: rotate(45deg) translateY(10px);
 }
 .navbar-toggler.collapsed span:nth-child(3) {
-  transform: rotate(-45deg);
-  bottom: 7px;
+  transform: rotate(-45deg) translateY(-10px);
 }
 .navbar-toggler.collapsed span:nth-child(2) {
   opacity: 0;
