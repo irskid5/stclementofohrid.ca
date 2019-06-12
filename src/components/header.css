@@ -7,7 +7,7 @@
   display: block;
 }
 
-.box-items {
+.box-links {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -144,6 +144,9 @@
 }
 
 @media (max-width: 991px) {
+  #basic-navbar-nav > div {
+    align-items: flex-start;
+  }
   #basic-navbar-nav > div > a {
     text-align: center;
   }
@@ -169,6 +172,11 @@
   }
   #basic-navbar-nav > div > div > a {
     text-align: center;
+  }
+  #basic-navbar-nav > div > div > a::before {
+    display: none;
+    -webkit-transition: 0;
+    transition: 0;
   }
   #basic-navbar-nav > div > div > div > a {
     text-align: center;
