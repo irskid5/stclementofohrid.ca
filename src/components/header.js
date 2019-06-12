@@ -57,7 +57,15 @@ const Header = ({ siteTitle, menuLinks, headerImage }) => (
       </Link>
     </div>
     <div className="box-hamburger">
-      <Navbar.Toggle aria-controls="basic-navbar-nav" id="toggler-hamburger" />
+      <Navbar.Toggle
+        aria-controls="responsive-navbar-nav"
+        id="toggler-hamburger"
+      >
+        <span className="icon-bar" />
+        <span className="icon-bar" />
+        <span className="icon-bar" />
+        <span className="sr-only">Toggle navigation</span>
+      </Navbar.Toggle>
     </div>
   </Navbar>
 )
