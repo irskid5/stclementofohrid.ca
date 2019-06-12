@@ -1,5 +1,9 @@
-#navbar {
+.navbar {
+  transition: all 500ms ease;
   background-color: transparent;
+}
+.scroll {
+  background-color: #f8f9fa;
 }
 
 .navbarLogo {
