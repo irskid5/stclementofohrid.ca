@@ -143,46 +143,40 @@
   margin-left: auto;
   border: none;
   outline-color: transparent;
+  padding: 10px;
 }
-
 .navbar-toggler .icon-bar {
+  position: relative;
   background-color: #888;
-}
-.navbar-toggler .icon-bar {
   display: block;
-  width: 22px;
-  height: 2px;
+  width: 23px;
+  height: 3px;
   border-radius: 1px;
+  margin: 4px;
 }
-.navbar-toggler .icon-bar + .icon-bar {
-  margin-top: 4px;
-}
-
 .navbar-toggler span.icon-bar {
-  transition: all 0.15s;
+  transition: all 0.25s;
 }
 
 .navbar-toggler span:nth-child(1),
 .navbar-toggler span:nth-child(3) {
   transform: rotate(0);
 }
-
 .navbar-toggler span:nth-child(2) {
   opacity: 1;
 }
 
 .navbar-toggler.collapsed span:nth-child(1) {
   transform: rotate(45deg);
-  transform-origin: 10% 10%;
+  top: 7px;
 }
-
 .navbar-toggler.collapsed span:nth-child(3) {
   transform: rotate(-45deg);
-  transform-origin: 10% 90%;
+  bottom: 7px;
 }
-
 .navbar-toggler.collapsed span:nth-child(2) {
   opacity: 0;
+  transform: translateX(-23px);
 }
 
 @media (max-width: 991px) {
