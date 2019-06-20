@@ -3,7 +3,7 @@ import React, { Component } from "react"
 // import Img from "gatsby-image"
 import Link from "gatsby-link"
 
-import { Navbar, Nav, NavDropdown } from "react-bootstrap"
+import { Navbar, Nav, NavDropdown, Dropdown } from "react-bootstrap"
 
 import "./header.css"
 
@@ -13,9 +13,11 @@ class Header extends Component {
 
     this.state = {
       isTop: true,
+      isMobile: false,
     }
 
     this.onScroll = this.onScroll.bind(this)
+    this.onMobile = this.onMobile.bind(this)
   }
 
   componentDidMount() {
@@ -25,10 +27,20 @@ class Header extends Component {
         this.onScroll(isTop)
       }
     })
+
+    window.addEventListener("resize", () => {
+      this.onMobile()
+    })
   }
 
   onScroll(isTop) {
     this.setState({ isTop: isTop })
+  }
+
+  onMobile() {
+    this.setState({
+      isMobile: window.innerWidth < 991,
+    })
   }
 
   render() {
@@ -54,23 +66,29 @@ class Header extends Component {
               <Link className="nav-link" to="/events">
                 Events
               </Link>
-              <NavDropdown title="Groups" id="basic-nav-dropdown">
-                <Link className="dropdown-item" to="/groups">
-                  Ensemble Makedonka
-                </Link>
-                <Link className="dropdown-item" to="/groups">
-                  Ladies Auxilary
-                </Link>
-                <Link className="dropdown-item" to="/groups">
-                  Bowling
-                </Link>
-                <Link className="dropdown-item" to="/groups">
-                  Sunday School
-                </Link>
-                <Link className="dropdown-item" to="/groups">
-                  MYNET
-                </Link>
-              </NavDropdown>
+              <Dropdown
+                id="basic-nav-dropdown"
+                drop={this.state.isMobile ? "right" : "down"}
+              >
+                <Dropdown.Toggle id="dropdown-toggle">Groups</Dropdown.Toggle>
+                <Dropdown.Menu className={this.state.isTop ? "" : "scroll"}>
+                  <Link className="dropdown-item" to="/groups">
+                    Ensemble Makedonka
+                  </Link>
+                  <Link className="dropdown-item" to="/groups">
+                    Ladies Auxilary
+                  </Link>
+                  <Link className="dropdown-item" to="/groups">
+                    Bowling
+                  </Link>
+                  <Link className="dropdown-item" to="/groups">
+                    Sunday School
+                  </Link>
+                  <Link className="dropdown-item" to="/groups">
+                    MYNET
+                  </Link>
+                </Dropdown.Menu>
+              </Dropdown>
             </Nav>
           </Navbar.Collapse>
         </div>
