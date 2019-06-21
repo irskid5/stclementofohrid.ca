@@ -145,16 +145,22 @@
 
 #groups-nav-dropdown > div {
   border: 0;
-  padding-top: 16px;
+  padding: 0;
   transition: all 500ms ease;
   padding-bottom: 0;
+  border-radius: 2px;
+  box-shadow: 0px 1px 10px #999;
 }
 #groups-nav-dropdown > div > a {
   color: #64605b;
+  padding-left: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 15px;
 }
 #groups-nav-dropdown > div > a:hover {
-  background-color: transparent;
   color: #0a0909;
+  background-color: #eee;
 }
 #groups-nav-dropdown > div > a:active {
   color: #0a0909;
@@ -207,7 +213,7 @@
     font-size: 1.2vw;
   }
   #groups-nav-dropdown > div > a {
-    font-size: 1.2vw;
+    font-size: 0.8vw;
   }
 }
 
