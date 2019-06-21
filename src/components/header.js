@@ -67,11 +67,13 @@ class Header extends Component {
                 Events
               </Link>
               <Dropdown
-                id="basic-nav-dropdown"
+                id="groups-nav-dropdown"
                 drop={this.state.isMobile ? "right" : "down"}
               >
                 <Dropdown.Toggle id="dropdown-toggle">Groups</Dropdown.Toggle>
-                <Dropdown.Menu className={this.state.isTop ? "" : "scroll"}>
+                <Dropdown.Menu
+                  className={this.state.isTop ? "" : "dropdown-scroll"}
+                >
                   <Link className="dropdown-item" to="/groups">
                     Ensemble Makedonka
                   </Link>
