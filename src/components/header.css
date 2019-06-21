@@ -9,6 +9,7 @@
 .navbarLogo {
   max-width: 270px;
   min-width: 200px;
+  max-height: 60px;
 }
 
 .box-links {
@@ -138,13 +139,9 @@
 }
 
 #basic-nav-dropdown > div {
-  background-color: transparent;
+  background-color: white;
   border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  border-left: 1px solid rgba(0, 0, 0, 0.15);
-  border-right: 1px solid rgba(0, 0, 0, 0.15);
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  padding-top: 30px;
 }
 #basic-nav-dropdown > div > a {
   color: #64605b;
@@ -201,6 +198,9 @@
     font-size: 1.2vw;
   }
   #dropdown-toggle {
+    font-size: 1.2vw;
+  }
+  #basic-nav-dropdown > div > a {
     font-size: 1.2vw;
   }
 }
