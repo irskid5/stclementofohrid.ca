@@ -3,7 +3,15 @@ import React, { Component } from "react"
 // import Img from "gatsby-image"
 import Link from "gatsby-link"
 
-import { Navbar, Nav, NavDropdown, Dropdown } from "react-bootstrap"
+import {
+  Navbar,
+  Nav,
+  NavDropdown,
+  Dropdown,
+  Button,
+  NavItem,
+  Accordion,
+} from "react-bootstrap"
 
 import "./header.css"
 
@@ -14,13 +22,44 @@ class Header extends Component {
     this.state = {
       isTop: true,
       isMobile: false,
+      dropdownOrAccordion: null,
     }
+
+    this.setState({
+      dropdownOrAccordion: (
+        <Dropdown
+          id="groups-nav-dropdown"
+          // drop={this.state.isMobile ? "right" : "down"}
+        >
+          <Dropdown.Toggle id="dropdown-toggle">Groups</Dropdown.Toggle>
+          <Dropdown.Menu className={this.state.isTop ? "" : "dropdown-scroll"}>
+            <Link className="dropdown-item" to="/groups">
+              Ensemble Makedonka
+            </Link>
+            <Link className="dropdown-item" to="/groups">
+              Ladies Auxilary
+            </Link>
+            <Link className="dropdown-item" to="/groups">
+              Bowling
+            </Link>
+            <Link className="dropdown-item" to="/groups">
+              Sunday School
+            </Link>
+            <Link className="dropdown-item" to="/groups">
+              MYNET
+            </Link>
+          </Dropdown.Menu>
+        </Dropdown>
+      ),
+    })
 
     this.onScroll = this.onScroll.bind(this)
     this.onMobile = this.onMobile.bind(this)
   }
 
   componentDidMount() {
+    this.onMobile()
+
     document.addEventListener("scroll", () => {
       const isTop = window.scrollY < 50
       if (isTop !== this.state.isTop) {
@@ -40,6 +79,64 @@ class Header extends Component {
   onMobile() {
     this.setState({
       isMobile: window.innerWidth < 991,
+      dropdownOrAccordion:
+        window.innerWidth < 991 ? (
+          <Accordion>
+            <Accordion.Toggle
+              as="div"
+              variant="link"
+              eventKey="0"
+              className="accordian-collapse-header"
+            >
+              Groups
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="0">
+              <div id="accordian-collapse" className="accordian-collapse">
+                <Link className="accordian-collapse-item" to="/groups">
+                  Ensemble Makedonka
+                </Link>
+                <Link className="accordian-collapse-item" to="/groups">
+                  Ladies Auxilary
+                </Link>
+                <Link className="accordian-collapse-item" to="/groups">
+                  Bowling
+                </Link>
+                <Link className="accordian-collapse-item" to="/groups">
+                  Sunday School
+                </Link>
+                <Link className="accordian-collapse-item" to="/groups">
+                  MYNET
+                </Link>
+              </div>
+            </Accordion.Collapse>
+          </Accordion>
+        ) : (
+          <Dropdown
+            id="groups-nav-dropdown"
+            // drop={this.state.isMobile ? "right" : "down"}
+          >
+            <Dropdown.Toggle id="dropdown-toggle">Groups</Dropdown.Toggle>
+            <Dropdown.Menu
+              className={this.state.isTop ? "" : "dropdown-scroll"}
+            >
+              <Link className="dropdown-item" to="/groups">
+                Ensemble Makedonka
+              </Link>
+              <Link className="dropdown-item" to="/groups">
+                Ladies Auxilary
+              </Link>
+              <Link className="dropdown-item" to="/groups">
+                Bowling
+              </Link>
+              <Link className="dropdown-item" to="/groups">
+                Sunday School
+              </Link>
+              <Link className="dropdown-item" to="/groups">
+                MYNET
+              </Link>
+            </Dropdown.Menu>
+          </Dropdown>
+        ),
     })
   }
 
@@ -66,31 +163,7 @@ class Header extends Component {
               <Link className="nav-link" to="/events">
                 Events
               </Link>
-              <Dropdown
-                id="groups-nav-dropdown"
-                drop={this.state.isMobile ? "right" : "down"}
-              >
-                <Dropdown.Toggle id="dropdown-toggle">Groups</Dropdown.Toggle>
-                <Dropdown.Menu
-                  className={this.state.isTop ? "" : "dropdown-scroll"}
-                >
-                  <Link className="dropdown-item" to="/groups">
-                    Ensemble Makedonka
-                  </Link>
-                  <Link className="dropdown-item" to="/groups">
-                    Ladies Auxilary
-                  </Link>
-                  <Link className="dropdown-item" to="/groups">
-                    Bowling
-                  </Link>
-                  <Link className="dropdown-item" to="/groups">
-                    Sunday School
-                  </Link>
-                  <Link className="dropdown-item" to="/groups">
-                    MYNET
-                  </Link>
-                </Dropdown.Menu>
-              </Dropdown>
+              {this.state.dropdownOrAccordion}
             </Nav>
           </Navbar.Collapse>
         </div>
