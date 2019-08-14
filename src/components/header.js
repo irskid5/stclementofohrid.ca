@@ -86,25 +86,25 @@ class Header extends Component {
               as="div"
               variant="link"
               eventKey="0"
-              className="accordian-collapse-header"
+              className="accordion-collapse-header"
             >
               Groups
             </Accordion.Toggle>
             <Accordion.Collapse eventKey="0">
-              <div id="accordian-collapse" className="accordian-collapse">
-                <Link className="accordian-collapse-item" to="/groups">
+              <div id="accordion-collapse" className="accordion-collapse">
+                <Link className="accordion-collapse-item" to="/groups">
                   Ensemble Makedonka
                 </Link>
-                <Link className="accordian-collapse-item" to="/groups">
+                <Link className="accordion-collapse-item" to="/groups">
                   Ladies Auxilary
                 </Link>
-                <Link className="accordian-collapse-item" to="/groups">
+                <Link className="accordion-collapse-item" to="/groups">
                   Bowling
                 </Link>
-                <Link className="accordian-collapse-item" to="/groups">
+                <Link className="accordion-collapse-item" to="/groups">
                   Sunday School
                 </Link>
-                <Link className="accordian-collapse-item" to="/groups">
+                <Link className="accordion-collapse-item" to="/groups">
                   MYNET
                 </Link>
               </div>

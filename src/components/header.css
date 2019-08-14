@@ -37,26 +37,26 @@
 .accordion {
   width: 100%;
 }
-.accordian-collapse {
+.accordion-collapse {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
 }
-.accordian-collapse-item {
+.accordion-collapse-item {
   padding-left: 0;
-  background-color: #e8e8e8;
+  background-color: #f0f0f0;
   width: 100%;
   color: #0a0909;
 }
-.accordian-collapse-item:focus,
-.accordian-collapse-item:hover {
+.accordion-collapse-item:focus,
+.accordion-collapse-item:hover {
   background-color: #c8c8c8;
   text-decoration: none;
   color: #0a0909;
 }
-.accordian-collapse-header {
+.accordion-collapse-header {
   color: #64605b;
   padding: 8px;
   padding-left: 0;
