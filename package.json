@@ -1,16 +1,14 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "stclementofohrid.ca",
+  "private": false,
+  "description": "Wesbite for St.Clement of Ohrid Macedonian Orthodox Cathedral",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Vele Tosevski <vele.tosevski@mail.utoronto.ca>",
   "dependencies": {
     "@fortawesome/fontawesome-free-brands": "^5.0.13",
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "bootstrap": "^4.3.1",
-    "bulma": "^0.7.4",
     "gatsby": "^2.11.3",
     "gatsby-image": "^2.0.35",
     "gatsby-plugin-layout": "^1.0.14",
@@ -25,10 +23,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-bootstrap": "^1.0.0-beta.8",
-    "react-bulma-components": "^2.3.0",
     "react-dom": "^16.8.4",
-    "react-helmet": "^5.2.0",
-    "reactstrap": "^7.1.0"
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
     "prettier": "^1.16.4",
@@ -48,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/irskid5/stclementofohrid.ca"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
