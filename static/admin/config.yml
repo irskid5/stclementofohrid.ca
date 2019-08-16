@@ -13,7 +13,7 @@ display_url: https://stclementofohrid.ca/
 collections:
   - label: "Religious Blog in English"
     name: "religious_blog_en"
-    folder: "_posts/religious_blog"
+    folder: "src/_posts/religious_blog"
     filter: {field: "language", value: "en"}
     create: true
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
@@ -23,8 +23,9 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Photo Gallery", name: "galleryImages", widget: "list", field: {label: Image, name: image, widget: image}}
   - label: "Верски Блог на Македонски"
-    name: "religious_blog_mkd"
+    name: "src/religious_blog_mkd"
     folder: "_posts/religious_blog"
     filter: {field: "language", value: "mkd"}
     create: true
@@ -35,3 +36,4 @@ collections:
       - {label: "Датум на Објавување", name: "date", widget: "datetime"}
       - {label: "Слика", name: "thumbnail", widget: "image"}
       - {label: "Тело", name: "body", widget: "markdown"}
+      - {label: "Фото Галерија", name: "galleryImages", widget: "list", field: {label: Фото, name: image, widget: image}}
