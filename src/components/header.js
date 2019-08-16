@@ -79,7 +79,41 @@ class Header extends Component {
   onMobile() {
     this.setState({
       isMobile: window.innerWidth < 991,
-      dropdownOrAccordion:
+      spiritualDropdownOrAccordion:
+        window.innerWidth < 991 ? (
+          <Accordion>
+            <Accordion.Toggle
+              as="div"
+              variant="link"
+              eventKey="0"
+              className="accordion-collapse-header"
+            >
+              Spiritual
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="0">
+              <div id="accordion-collapse" className="accordion-collapse">
+                <Link className="accordion-collapse-item" to="/spiritual">
+                  Blog
+                </Link>
+              </div>
+            </Accordion.Collapse>
+          </Accordion>
+        ) : (
+          <Dropdown
+            id="groups-nav-dropdown"
+            // drop={this.state.isMobile ? "right" : "down"}
+          >
+            <Dropdown.Toggle id="dropdown-toggle">Spiritual</Dropdown.Toggle>
+            <Dropdown.Menu
+              className={this.state.isTop ? "" : "dropdown-scroll"}
+            >
+              <Link className="dropdown-item" to="/spiritual">
+                Blog
+              </Link>
+            </Dropdown.Menu>
+          </Dropdown>
+        ),
+      groupsDropdownOrAccordion:
         window.innerWidth < 991 ? (
           <Accordion>
             <Accordion.Toggle
@@ -154,16 +188,14 @@ class Header extends Component {
               <Link className="nav-link" to="/about">
                 About
               </Link>
-              <Link className="nav-link" to="/spiritual">
-                Spiritual
-              </Link>
+              {this.state.spiritualDropdownOrAccordion}
               <Link className="nav-link" to="/banquethalls">
                 Banquet Halls
               </Link>
               <Link className="nav-link" to="/events">
                 Events
               </Link>
-              {this.state.dropdownOrAccordion}
+              {this.state.groupsDropdownOrAccordion}
             </Nav>
           </Navbar.Collapse>
         </div>
