@@ -16,6 +16,8 @@ collections:
     folder: "_posts/religious_blog"
     filter: {field: "language", value: "en"}
     create: true
+    extension: "json"
+    format: "json"
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     fields:
       - {label: "Language", name: "language", widget: "select", options: ["en", "mkd"]}
@@ -29,6 +31,8 @@ collections:
     folder: "_posts/religious_blog"
     filter: {field: "language", value: "mkd"}
     create: true
+    extension: "json"
+    format: "json"
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     fields:
       - {label: "Јазик", name: "language", widget: "select", options: ["en", "mkd"]}
