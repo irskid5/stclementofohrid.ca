@@ -25,34 +25,6 @@ class Header extends Component {
       dropdownOrAccordion: null,
     }
 
-    this.setState({
-      dropdownOrAccordion: (
-        <Dropdown
-          id="groups-nav-dropdown"
-          // drop={this.state.isMobile ? "right" : "down"}
-        >
-          <Dropdown.Toggle id="dropdown-toggle">Groups</Dropdown.Toggle>
-          <Dropdown.Menu className={this.state.isTop ? "" : "dropdown-scroll"}>
-            <Link className="dropdown-item" to="/groups">
-              Ensemble Makedonka
-            </Link>
-            <Link className="dropdown-item" to="/groups">
-              Ladies Auxilary
-            </Link>
-            <Link className="dropdown-item" to="/groups">
-              Bowling
-            </Link>
-            <Link className="dropdown-item" to="/groups">
-              Sunday School
-            </Link>
-            <Link className="dropdown-item" to="/groups">
-              MYNET
-            </Link>
-          </Dropdown.Menu>
-        </Dropdown>
-      ),
-    })
-
     this.onScroll = this.onScroll.bind(this)
     this.onMobile = this.onMobile.bind(this)
   }

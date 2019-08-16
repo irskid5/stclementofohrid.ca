@@ -21,6 +21,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     fields:
       - {label: "Language", name: "language", widget: "select", options: ["en", "mkd"]}
+      - {label: "Display on Home Page?", name: "forHomePage", widget: "boolean", default: "false"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
@@ -36,6 +37,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     fields:
       - {label: "Јазик", name: "language", widget: "select", options: ["en", "mkd"]}
+      - {label: "Прикажи на Почетната Страница?", name: "forHomePage", widget: "boolean", default: "false"}
       - {label: "Наслов", name: "title", widget: "string"}
       - {label: "Датум на Објавување", name: "date", widget: "datetime"}
       - {label: "Слика", name: "thumbnail", widget: "image"}
