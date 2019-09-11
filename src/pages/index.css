@@ -1,6 +1,87 @@
 .mainBody {
-  /* position: relative;
-  top: -100px; */
+  position: relative;
+  top: -78px;
 }
 .startingImage {
+  height: 100vh;
+}
+.mainImageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.welcomeTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  margin-top: 18vh;
+  margin-left: 3.5vw;
+  font-size: 2.8vw;
+  color: #494643;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+
+.h1,
+h1 {
+  font-size: 3vw;
+}
+
+.h2,
+h2 {
+  font-size: 2.3vw;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
