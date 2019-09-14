@@ -20,11 +20,12 @@
   justify-content: flex-start;
 }
 .shadownOnImage {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.56);
   position: absolute;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   z-index: 1000;
+  overflow-x: hidden;
 }
 .mainImageContainer {
   display: flex;
