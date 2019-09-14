@@ -1,9 +1,30 @@
 .mainBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   position: relative;
   top: -78px;
 }
 .startingImage {
   height: 100vh;
+}
+.startingSermonImage {
+  height: 100vh;
+  position: absolute;
+  /* -webkit-filter: grayscale(100%); Safari 6.0 - 9.0 */
+  /* filter: grayscale(100%); */
+}
+.startingSermonImageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.shadownOnImage {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
 }
 .mainImageContainer {
   display: flex;
@@ -14,10 +35,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: center;
+  z-index: 1000;
   justify-content: flex-start;
   position: absolute;
   margin-top: 18vh;
-  margin-left: 3.5vw;
+  /* margin-left: 3.5vw; */
   font-size: 2.8vw;
   color: #494643;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -29,12 +52,41 @@
 
 .h1,
 h1 {
-  font-size: 3vw;
+  /* font-size: 3vw; */
+  font-size: 2.3rem;
 }
 
 .h2,
 h2 {
-  font-size: 2.3vw;
+  /* font-size: 2.3vw; */
+  font-size: 1.8rem;
+}
+
+@media (max-width: 700px) {
+  .h1,
+  h1 {
+    /* font-size: 3vw; */
+    font-size: 1.5rem;
+  }
+
+  .h2,
+  h2 {
+    /* font-size: 2.3vw; */
+    font-size: 1rem;
+  }
+}
+@media (max-width: 375px) {
+  .h1,
+  h1 {
+    /* font-size: 3vw; */
+    font-size: 1.2rem;
+  }
+
+  .h2,
+  h2 {
+    /* font-size: 2.3vw; */
+    font-size: 0.7rem;
+  }
 }
 
 @keyframes fadein {

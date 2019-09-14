@@ -23,10 +23,12 @@ class Header extends Component {
       isTop: true,
       isMobile: false,
       dropdownOrAccordion: null,
+      hamburgerToggle: false,
     }
 
     this.onScroll = this.onScroll.bind(this)
     this.onMobile = this.onMobile.bind(this)
+    this.onHamburgerToggle = this.onHamburgerToggle.bind(this)
   }
 
   componentDidMount() {
@@ -46,6 +48,10 @@ class Header extends Component {
 
   onScroll(isTop) {
     this.setState({ isTop: isTop })
+  }
+
+  onHamburgerToggle() {
+    this.setState({ hamburgerToggle: !this.state.hamburgerToggle })
   }
 
   onMobile() {
@@ -152,7 +158,9 @@ class Header extends Component {
         expand="lg"
         sticky="top"
         id="header"
-        className={this.state.isTop ? "" : "scroll"}
+        className={
+          this.state.isTop && !this.state.hamburgerToggle ? "" : "scroll"
+        }
       >
         <div className="box-links">
           <Navbar.Collapse id="basic-navbar-nav">
@@ -184,6 +192,7 @@ class Header extends Component {
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
             id="toggler-hamburger"
+            onClick={this.onHamburgerToggle}
           >
             <span className="icon-bar" />
             <span className="icon-bar" />
