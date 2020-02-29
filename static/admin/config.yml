@@ -1,9 +1,13 @@
+#backend:
+# name: git-gateway
+# accept_roles: #optional - accepts all users if left out
+#   - admin
+#   - editor
+# branch: master
+
 backend:
-  name: git-gateway
-  accept_roles: #optional - accepts all users if left out
-    - admin
-    - editor
-  branch: master
+  name: github
+  repo: irskid5/stclementofohrid.ca # Path to your GitHub repository
 
 media_folder: src/images
 public_folder: src/images
@@ -14,32 +18,82 @@ collections:
   - label: "Religious Blog in English"
     name: "religious_blog_en"
     folder: "_posts/religious_blog"
-    filter: {field: "language", value: "en"}
+    filter: { field: "language", value: "en" }
     create: true
-    extension: "json"
-    format: "json"
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     fields:
-      - {label: "Language", name: "language", widget: "select", options: ["en", "mkd"]}
-      - {label: "Display on Home Page?", name: "forHomePage", widget: "boolean", default: "false"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Photo Gallery", name: "galleryImages", widget: "list", field: {label: "Image", name: "image", widget: "image"}}
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options: ["en", "mkd"],
+        }
+      - {
+          label: "Visible",
+          name: "visible",
+          widget: "boolean",
+          default: "false",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "religious-blog-post",
+        }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Featured Image",
+          name: "featuredImage",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Photo Gallery",
+          name: "galleryImages",
+          widget: "list",
+          field: { label: "Image", name: "image", widget: "image" },
+          required: false,
+        }
   - label: "Верски Блог на Македонски"
     name: "religious_blog_mkd"
     folder: "_posts/religious_blog"
-    filter: {field: "language", value: "mkd"}
+    filter: { field: "language", value: "mkd" }
     create: true
-    extension: "json"
-    format: "json"
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     fields:
-      - {label: "Јазик", name: "language", widget: "select", options: ["en", "mkd"]}
-      - {label: "Прикажи на Почетната Страница?", name: "forHomePage", widget: "boolean", default: "false"}
-      - {label: "Наслов", name: "title", widget: "string"}
-      - {label: "Датум на Објавување", name: "date", widget: "datetime"}
-      - {label: "Слика", name: "thumbnail", widget: "image"}
-      - {label: "Тело", name: "body", widget: "markdown"}
-      - {label: "Фото Галерија", name: "galleryImages", widget: "list", field: {label: "Фото", name: "image", widget: "image"}}
+      - {
+          label: "Јазик",
+          name: "language",
+          widget: "select",
+          options: ["en", "mkd"],
+        }
+      - {
+          label: "Visible",
+          name: "visible",
+          widget: "boolean",
+          default: "false",
+        }
+      - { label: "Наслов", name: "title", widget: "string" }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "religious-blog-post",
+        }
+      - { label: "Датум на Објавување", name: "date", widget: "datetime" }
+      - {
+          label: "Слика",
+          name: "featuredImage",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Тело", name: "body", widget: "markdown" }
+      - {
+          label: "Фото Галерија",
+          name: "galleryImages",
+          widget: "list",
+          field: { label: "Фото", name: "image", widget: "image" },
+          required: false,
+        }

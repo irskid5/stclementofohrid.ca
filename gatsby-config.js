@@ -37,6 +37,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -55,6 +56,13 @@ module.exports = {
       resolve: `gatsby-plugin-layout`,
       options: {
         component: require.resolve(`./src/components/layout.js`),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `religious-blog`,
+        path: `${__dirname}/src/_posts/religious_blog`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

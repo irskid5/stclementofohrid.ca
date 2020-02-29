@@ -112,7 +112,7 @@ class Footer extends Component {
               </a>
             </div>
           </div>
-          <div>
+          <div style={{ alignItems: "center" }}>
             <h1 style={{ paddingBottom: "0.5em", fontSize: "14pt" }}>
               We Need Your Help!
             </h1>

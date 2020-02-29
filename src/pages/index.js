@@ -2,11 +2,15 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Link from "gatsby-link"
+
 import "animate.css/animate.min.css"
 import ScrollAnimation from "react-animate-on-scroll"
+
 import { Button } from "react-bootstrap"
 
+// Components
 import SEO from "../components/seo"
+import EventSlider from "../components/eventSlider"
 
 import "./index.css"
 
@@ -114,6 +118,13 @@ class IndexPage extends React.Component {
                   </div>
                 </div>
               </div>
+            </ScrollAnimation>
+            <ScrollAnimation
+              animateIn="fadeIn"
+              animateOut="fadeOut"
+              duration={1}
+            >
+              <EventSlider />
             </ScrollAnimation>
           </div>
         )}
