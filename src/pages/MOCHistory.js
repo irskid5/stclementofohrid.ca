@@ -10,4 +10,4 @@ const MOCHistoryPage = () => (
   </>
 )
 
-export default SpiritualPage
+export default MOCHistoryPage
